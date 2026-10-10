@@ -12,7 +12,7 @@ The goal is to leverage Natural Language Processing (NLP) and deep learning tech
 ## 🚀 Project Highlights
 
 - Built an LSTM-based neural network for sequential text classification.
-- Achieved **99% test accuracy** with strong precision, recall, and F1-scores.
+- Achieved **99.5% test accuracy** (0.9949) with strong precision, recall, and F1-scores.
 - Applied comprehensive text cleaning (URL removal, punctuation stripping, stemming, etc.).
 - Tokenized and padded text data for efficient model training.
 - Implemented **EarlyStopping** to prevent overfitting.
@@ -36,7 +36,7 @@ The goal is to leverage Natural Language Processing (NLP) and deep learning tech
 
 | Metric | Value |
 |:------|:------|
-| Test Accuracy | 99% |
+| Test Accuracy | 99.5% |
 | Precision (Fake News) | 100% |
 | Recall (Fake News) | 99% |
 | Precision (Real News) | 99% |
@@ -54,6 +54,14 @@ The goal is to leverage Natural Language Processing (NLP) and deep learning tech
     ├── True.csv                      # Dataset for real news
 ├── README.md                         # Project documentation
 ```
+
+---
+
+## ⚠️ Limitations
+
+- The same 20% split was used as validation data for early stopping and as the final test set, so the test score is slightly optimistic. A separate hold-out set would be cleaner.
+- Training was unstable in the middle: accuracy dropped to about 68% at epoch 4 before recovering.
+- Many real articles start with a "(Reuters)" dateline, and the text cleaning keeps the word "reuters". The model may be learning some of the source's writing style, not only whether a story is true, so scores this high on this dataset should be read with caution.
 
 ---
 
@@ -77,4 +85,4 @@ The goal is to leverage Natural Language Processing (NLP) and deep learning tech
 ## 📬 Contact
 
 **Jean-Emmanuel Kouadio**  
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com) or check out my other projects on [GitHub](https://github.com)!
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/j-emmanuel-k/) or check out my other projects on [GitHub](https://github.com/jeanemmanuelk)!
